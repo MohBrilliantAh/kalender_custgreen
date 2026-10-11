@@ -47,8 +47,8 @@ function LandingPage() {
         <div className="flex flex-col items-center justify-center w-full lg:w-1/2 mt-8 lg:mt-0">
           <div className="relative mb-6">
             <img 
-              src="public/fotov2.jpg" 
-              alt="Mohammad Brilliant - " 
+              src="/foto.png" 
+              alt="Mohammad Brilliant - Green SM Driver" 
               className="w-40 h-40 md:w-56 md:h-56 object-contain relative z-10 drop-shadow-2xl"
             />
             <div className="absolute inset-0 bg-white/20 rounded-full blur-2xl z-0 scale-125"></div>
@@ -65,7 +65,7 @@ function LandingPage() {
 
           <div className="relative w-full max-w-[280px] md:max-w-md hidden md:block">
             <img 
-              src="public/taxi.png" 
+              src="/mobil.png" 
               alt="Ilustrasi VinFast Green SM" 
               className="w-full h-auto drop-shadow-2xl animate-pulse-slow object-contain"
               style={{ animationDuration: '3s' }}
@@ -85,7 +85,7 @@ function LandingPage() {
                 <label className="block text-sm font-semibold text-gray-600 mb-1">ID Driver/No-Lambung</label>
                 <input 
                   type="text" 
-                  placeholder="Contoh: GT-10205" 
+                  placeholder="Contoh : GT-10205" 
                   className="w-full p-3 md:p-4 text-base bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all" 
                   value={driverId} 
                   onChange={(e) => setDriverId(e.target.value)} 
@@ -133,7 +133,7 @@ function LandingPage() {
   );
 }
 
-// --- DASHBOARD & KALENDER (DENGAN EDIT & HAPUS & FOTO HEADER) ---
+// --- DASHBOARD & KALENDER ---
 function Dashboard({ session }) {
   const [date, setDate] = useState(new Date());
   const [schedules, setSchedules] = useState([]);
@@ -216,15 +216,14 @@ function Dashboard({ session }) {
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
-      {/* Header dengan Gradien & Foto Profil */}
       <header className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white p-4 md:p-5 shadow-lg flex justify-between items-center sticky top-0 z-50">
         <div className="flex items-center">
           <img 
-            src="public/Logo Green SM x Brilliant V2.jpg" 
+            src="/foto.png" 
             alt="Profil" 
             className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white shadow-sm mr-3 md:mr-4 object-contain bg-white/20"
           />
-          <h1 className="text-xl md:text-2xl font-extrabold tracking-wide drop-shadow-sm">Dashboard Pemesanan Pelanggan</h1>
+          <h1 className="text-xl md:text-2xl font-extrabold tracking-wide drop-shadow-sm">Dashboard Pemesanan Pelanggan Green SM</h1>
         </div>
         <button onClick={() => supabase.auth.signOut()} className="flex items-center space-x-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm px-4 py-2 md:px-5 md:py-2 rounded-xl transition-all font-semibold">
           <LogOut size={18} /> <span>Keluar</span>
@@ -232,7 +231,6 @@ function Dashboard({ session }) {
       </header>
 
       <main className="flex-grow flex flex-col lg:flex-row p-4 md:p-8 gap-8 max-w-7xl mx-auto w-full">
-        {/* Kolom Kiri: Kalender */}
         <div className="lg:w-5/12 flex flex-col">
           <div className="bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
             <h2 className="text-2xl font-extrabold mb-6 text-gray-800">Pilih Tanggal</h2>
@@ -246,7 +244,6 @@ function Dashboard({ session }) {
           </div>
         </div>
 
-        {/* Kolom Kanan: Form & List */}
         <div className="lg:w-7/12 flex flex-col gap-8">
           <form onSubmit={handleFormSubmit} className={`bg-white p-8 rounded-3xl shadow-xl border relative overflow-hidden transition-all ${editId ? 'border-yellow-400' : 'border-gray-100'}`}>
             <div className={`absolute top-0 left-0 w-full h-2 ${editId ? 'bg-yellow-400' : 'bg-gradient-to-r from-teal-400 to-cyan-500'}`}></div>
@@ -285,7 +282,6 @@ function Dashboard({ session }) {
             </div>
           </form>
 
-          {/* List Jadwal */}
           <div className="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 flex-grow">
             <h2 className="text-2xl font-extrabold mb-6 text-gray-800 flex items-center">
               Daftar Perjalanan
