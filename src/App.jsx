@@ -121,7 +121,7 @@ function LandingPage() {
       <footer className="bg-gray-900/95 backdrop-blur-md text-white p-6 text-center z-10 relative border-t border-gray-800">
         <p className="mb-4 text-sm md:text-base font-medium text-gray-300">Ingin mencoba atau punya pertanyaan? Hubungi admin:</p>
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-6">
-          <a href="https://wa.me/6280000000000" target="_blank" rel="noreferrer" className="flex items-center text-green-400 hover:text-green-300 transition font-bold bg-green-900/30 px-4 py-2 rounded-full w-full sm:w-auto justify-center">
+          <a href="https://wa.me/6282142095898" target="_blank" rel="noreferrer" className="flex items-center text-green-400 hover:text-green-300 transition font-bold bg-green-900/30 px-4 py-2 rounded-full w-full sm:w-auto justify-center">
              WhatsApp
           </a>
           <a href="https://instagram.com/Jaychanadrian" target="_blank" rel="noreferrer" className="flex items-center text-cyan-400 hover:text-cyan-300 transition font-bold bg-cyan-900/30 px-4 py-2 rounded-full w-full sm:w-auto justify-center">
