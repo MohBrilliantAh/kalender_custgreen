@@ -47,7 +47,7 @@ function LandingPage() {
         <div className="flex flex-col items-center justify-center w-full lg:w-1/2 mt-8 lg:mt-0">
           <div className="relative mb-6">
             <img 
-              src="public/Logo Green SM x Brilliant V2.jpg" 
+              src="public/fotov2.jpg" 
               alt="Mohammad Brilliant - " 
               className="w-40 h-40 md:w-56 md:h-56 object-contain relative z-10 drop-shadow-2xl"
             />
@@ -65,7 +65,7 @@ function LandingPage() {
 
           <div className="relative w-full max-w-[280px] md:max-w-md hidden md:block">
             <img 
-              src="public/mobil taxi gsm.png" 
+              src="public/taxi.png" 
               alt="Ilustrasi VinFast Green SM" 
               className="w-full h-auto drop-shadow-2xl animate-pulse-slow object-contain"
               style={{ animationDuration: '3s' }}
